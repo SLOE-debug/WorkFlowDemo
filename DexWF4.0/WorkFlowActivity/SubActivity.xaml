@@ -1,0 +1,115 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="DexWF4._0.WorkFlowActivity.SubActivity"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:local="clr-namespace:DexWF4._0.WorkFlowCodeActivity"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BookMark" Type="InArgument(x:String)" />
+    <x:Property Name="FlowID" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>DexWF4._0.WorkFlowActivity.SubActivity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>DevExpress.BonusSkins.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Charts.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.Data.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Persistent.Base.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Printing.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.Utils.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Utils.v18.1.UI</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraBars.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Sparkline.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraCharts.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraCharts.v18.1.Wizard</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraEditors.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraGrid.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraLayout.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraNavBar.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraReports.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraTreeList.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraVerticalGrid.v18.1</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Web</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Deployment</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>DAL</AssemblyReference>
+      <AssemblyReference>Model</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>DexWF4.0</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="VNum" />
+    </Sequence.Variables>
+    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="子流程启动" />
+    <local:Interflow x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Interflow`1_1">
+      <local:Interflow.Name>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">FlowID+"_"+BookMark</mca:CSharpValue>
+        </InArgument>
+      </local:Interflow.Name>
+      <local:Interflow.Result>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32">VNum</mca:CSharpReference>
+        </OutArgument>
+      </local:Interflow.Result>
+    </local:Interflow>
+    <InvokeMethod sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Show" TargetType="av:MessageBox">
+      <InArgument x:TypeArguments="x:String">
+        <mca:CSharpValue x:TypeArguments="x:String">$"VNum：{VNum}"</mca:CSharpValue>
+      </InArgument>
+    </InvokeMethod>
+    <sads:DebugSymbol.Symbol>d0xEOlznoIFcVlPmupDnoIFcV29ya0Zsb3dcRGV4V0Y0LjBcRGV4V0Y0LjBcV29ya0Zsb3dBY3Rpdml0eVxTdWJBY3Rpdml0eS54YW1sCEwDYw4CAQFQBVBNAgEQUQVcFwIBB10FYRQCAQJQQ1BKAgERWQtZVAIBDFQLVFwCAQhfCV9VAgED</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="225,63" />
+      <sap2010:ViewStateData Id="Interflow`1_1" sap:VirtualizedContainerService.HintSize="225,22" />
+      <sap2010:ViewStateData Id="InvokeMethod_1" sap:VirtualizedContainerService.HintSize="225,133" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="247,422">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DexWF4._0.WorkFlowActivity.SubActivity_1" sap:VirtualizedContainerService.HintSize="287,502" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

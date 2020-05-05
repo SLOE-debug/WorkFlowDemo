@@ -1,0 +1,9 @@
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\bin\Debug\DAL.dll.config
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\bin\Debug\DAL.dll
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\bin\Debug\DAL.pdb
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\bin\Debug\Model.dll
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\bin\Debug\Model.pdb
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\obj\Debug\DAL.dll
+D:\码\VS源码\WorkFlow\DexWF4.0\DAL\obj\Debug\DAL.pdb

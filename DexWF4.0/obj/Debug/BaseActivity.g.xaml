@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BaseActivity xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:local="clr-namespace:DexWF4._0.WorkFlowActivity;assembly=DexWF4.0" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>DevExpress.BonusSkins.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Charts.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.Data.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.ExpressApp.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Persistent.Base.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Printing.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.Utils.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Utils.v18.1.UI</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraBars.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.Sparkline.v18.1.Core</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraCharts.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraCharts.v18.1.Wizard</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraEditors.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraGrid.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraLayout.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraNavBar.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraReports.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraTreeList.v18.1</AssemblyReference>
+      <AssemblyReference>DevExpress.XtraVerticalGrid.v18.1</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.Configuration</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.DurableInstancing</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Web</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Deployment</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>DAL</AssemblyReference>
+      <AssemblyReference>Model</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>DexWF4.0</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <local:BaseActivity.Implementation>
+    <Sequence>
+      <WriteLine Text="流程开始" />
+      <ParallelForEach x:TypeArguments="x:Int32">
+        <ParallelForEach.Values>
+          <InArgument x:TypeArguments="scg:IEnumerable(x:Int32)">
+            <mca:CSharpValue x:TypeArguments="scg:IEnumerable(x:Int32)">BookMarks</mca:CSharpValue>
+          </InArgument>
+        </ParallelForEach.Values>
+        <ActivityAction x:TypeArguments="x:Int32">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="item" />
+          </ActivityAction.Argument>
+          <local:SubActivity>
+            <local:SubActivity.BookMark>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">item.ToString()</mca:CSharpValue>
+              </InArgument>
+            </local:SubActivity.BookMark>
+            <local:SubActivity.FlowID>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32">FlowID</mca:CSharpValue>
+              </InArgument>
+            </local:SubActivity.FlowID>
+          </local:SubActivity>
+        </ActivityAction>
+      </ParallelForEach>
+      <WriteLine Text="完成" />
+      <sads:DebugSymbol.Symbol>9xQDadtSgbUg+NFYXB5IkbV7lkv8301EOlznoIFcVlPmupDnoIFcV29ya0Zsb3dcRGV4V0Y0LjBcRGV4V0Y0LjBcV29ya0Zsb3dBY3Rpdml0eVxCYXNlQWN0aXZpdHkueGFtbApMA2gOAgEBTQVNTAIBEU4FZRcCAQRmBWZKAgECTUNNSQIBElELUWICAQ5YCWMdAgEFZkNmRwIBA1sPW1wCAQpgD2BSAgEG</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </local:BaseActivity.Implementation>
+</local:BaseActivity>

@@ -1,0 +1,4 @@
+obj\Debug\SubActivity.g.xaml
+obj\Debug\BaseActivity.g.xaml
+obj\Debug\DexWF4._0.WorkFlowActivity_SubActivity_BeforeInitializeComponentHelper.txt
+obj\Debug\DexWF4._0.WorkFlowActivity_BaseActivity_BeforeInitializeComponentHelper.txt

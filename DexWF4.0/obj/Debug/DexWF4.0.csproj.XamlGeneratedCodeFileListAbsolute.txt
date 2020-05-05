@@ -1,0 +1,7 @@
+obj\Debug\_DexWF4.0.g.cs
+obj\Debug\SubActivity.g.cs
+obj\Debug\BaseActivity.g.cs
+obj\Debug\DexWF4._0.WorkFlowActivity_SubActivity_BeforeInitializeComponentHelper.cs
+obj\Debug\DexWF4._0.WorkFlowActivity_BaseActivity_BeforeInitializeComponentHelper.cs
+D:\码\VS源码\WorkFlow\DexWF4.0\DexWF4.0\obj\Debug\DexWF4._0.WorkFlowActivity_SubActivity_CompiledExpressionRoot.cs
+D:\码\VS源码\WorkFlow\DexWF4.0\DexWF4.0\obj\Debug\DexWF4._0.WorkFlowActivity_BaseActivity_CompiledExpressionRoot.cs
